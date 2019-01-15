@@ -8,8 +8,8 @@ pipeline {
                 stage('Format') {
                     agent any
                     steps {
-                        script { 
-                            go.format({})
+                        script {
+                            sh code.format(["lang": "cpp"])
                         }
                     }
                 }
@@ -17,7 +17,7 @@ pipeline {
                     agent any
                     steps {
                         script { 
-                            go.check({})
+                            sh code.check(["lang": "cpp"])
                         }
                     }
                 }
@@ -25,7 +25,7 @@ pipeline {
                     agent any
                     steps {
                         script { 
-                            go.build({})
+                            sh code.build(["lang": "cpp"])
                         }
                     }
                 }
@@ -33,7 +33,7 @@ pipeline {
                     agent any
                     steps {
                         script { 
-                            go.test({})
+                            sh code.test(["lang": "cpp"])
                         }
                     }
                 }
@@ -41,7 +41,7 @@ pipeline {
                     agent any
                     steps {
                         script { 
-                            go.coverage({})
+                            sh code.coverage(["lang": "cpp"])
                         }
                     }
                 }
@@ -49,7 +49,7 @@ pipeline {
                     agent any
                     steps {
                         script { 
-                            go.docgen({})
+                            sh code.docgen(["lang": "cpp"])
                         }
                     }
                 }
