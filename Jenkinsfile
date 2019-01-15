@@ -1,3 +1,5 @@
+@Library('utils') _
+
 pipeline {
     agent none
     stages {
@@ -6,37 +8,49 @@ pipeline {
                 stage('Format') {
                     agent any
                     steps {
-                        sh 'echo "Format code"'
+                        script { 
+                            go.format({})
+                        }
                     }
                 }
                 stage('Check') {
                     agent any
                     steps {
-                        sh 'echo "Check"'
+                        script { 
+                            go.check({})
+                        }
                     }
                 }
                 stage('Build') {
                     agent any
                     steps {
-                        sh 'echo "Build"'
+                        script { 
+                            go.build({})
+                        }
                     }
                 }
                 stage('Test') {
                     agent any
                     steps {
-                        sh 'echo "Test"'
+                        script { 
+                            go.test({})
+                        }
                     }
                 }
                 stage('Coverage') {
                     agent any
                     steps {
-                        sh 'echo "Coverage"'
+                        script { 
+                            go.coverage({})
+                        }
                     }
                 }
                 stage('Docgen') {
                     agent any
                     steps {
-                        sh 'echo "Docgen"'
+                        script { 
+                            go.docgen({})
+                        }
                     }
                 }
             }
