@@ -1,0 +1,16 @@
+tool:
+  git:
+    installations:
+      - name: git
+        home: /usr/bin/git
+
+unclassified:
+  globalLibraries:
+    libraries:
+      - name: "utils"
+        defaultVersion: "master"
+        retriever:
+          modernSCM:
+            scm:
+              git:
+                remote: "https://github.com/emilioag/jenkins-tests.git"
