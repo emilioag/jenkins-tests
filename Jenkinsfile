@@ -1,12 +1,16 @@
 @Library('utils') _
 
 pipeline {
-    agent none
+    agent {
+        docker { image 'groovy:2.5' }
+    }
     stages {
         stage('Code steps') {
             parallel {
                 stage('Format') {
-                    agent any
+                    agent {
+                        docker { image 'groovy:2.5' }
+                    }
                     steps {
                         script {
                             sh code.format(["lang": "cpp"])
@@ -14,7 +18,9 @@ pipeline {
                     }
                 }
                 stage('Check') {
-                    agent any
+                    agent {
+                        docker { image 'groovy:2.5' }
+                    }
                     steps {
                         script { 
                             sh code.check(["lang": "cpp"])
@@ -22,7 +28,9 @@ pipeline {
                     }
                 }
                 stage('Build') {
-                    agent any
+                    agent {
+                        docker { image 'groovy:2.5' }
+                    }
                     steps {
                         script { 
                             sh code.build(["lang": "cpp"])
@@ -30,7 +38,9 @@ pipeline {
                     }
                 }
                 stage('Test') {
-                    agent any
+                    agent {
+                        docker { image 'groovy:2.5' }
+                    }
                     steps {
                         script { 
                             sh code.test(["lang": "cpp"])
@@ -38,7 +48,9 @@ pipeline {
                     }
                 }
                 stage('Coverage') {
-                    agent any
+                    agent {
+                        docker { image 'groovy:2.5' }
+                    }
                     steps {
                         script { 
                             sh code.coverage(["lang": "cpp"])
@@ -46,7 +58,9 @@ pipeline {
                     }
                 }
                 stage('Docgen') {
-                    agent any
+                    agent {
+                        docker { image 'groovy:2.5' }
+                    }
                     steps {
                         script { 
                             sh code.docgen(["lang": "cpp"])
