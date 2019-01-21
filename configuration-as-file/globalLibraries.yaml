@@ -8,7 +8,7 @@ unclassified:
   globalLibraries:
     libraries:
       - name: "utils"
-        defaultVersion: "master"
+        defaultVersion: "dsl"
         retriever:
           modernSCM:
             scm:
