@@ -1,5 +1,5 @@
-@Library('utils') _
+@Library('utils@dsl') _
 
-main {
+mypipeline {
 
 }
