@@ -1,5 +1,12 @@
-@Library('utils@dsl') _
+@Library('utils@master') _
 
 mypipeline {
-
+  operations = [
+    format: [
+      script: 'echo "format cosas"'
+    ],
+    build: [
+      script: 'echo "build cosas"'
+    ]
+  ]
 }

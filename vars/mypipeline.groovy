@@ -1,12 +1,16 @@
-def call(config) {
-    pipeline {
-        agent any
-        stages {
-            stage('Even Stage') {
-                steps {
-                    echo "The build number is even"
-                }
-            }
+def call(body) {
+    def cfg = [:]
+
+    body.resolveStrategy = Closure.DELEGATE_FIRST
+    body.delegate        = cfg
+    body()
+
+    node {
+      cfg.operations.each { opName, op ->
+        stage(opName) {
+          sh(op.script)
         }
+      }
     }
+
 }

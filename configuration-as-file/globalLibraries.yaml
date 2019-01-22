@@ -13,4 +13,15 @@ unclassified:
           modernSCM:
             scm:
               git:
-                remote: "https://github.com/emilioag/jenkins-tests.git"
+                remote: "https://github.com/emilioag/jenkins-tests-private.git"
+                credentialsId: "githubpass"
+
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              scope:    GLOBAL
+              id:       githubpass
+              username: emilioag
+              password: ${GITHUB_PASS}
