@@ -1,9 +1,3 @@
-tool:
-  git:
-    installations:
-      - name: git
-        home: /usr/bin/git
-
 unclassified:
   globalLibraries:
     libraries:
@@ -15,13 +9,3 @@ unclassified:
               git:
                 remote: "https://github.com/emilioag/jenkins-tests-private.git"
                 credentialsId: "githubpass"
-
-credentials:
-  system:
-    domainCredentials:
-      - credentials:
-          - usernamePassword:
-              scope:    GLOBAL
-              id:       githubpass
-              username: emilioag
-              password: ${GITHUB_PASS}
