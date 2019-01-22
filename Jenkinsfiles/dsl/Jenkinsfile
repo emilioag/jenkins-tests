@@ -3,10 +3,10 @@
 mypipeline {
   operations = [
     format: [
-      script: 'echo "format cosas"'
+      script: 'echo "format things"'
     ],
     build: [
-      script: 'echo "build cosas"'
+      script: 'echo "build things"'
     ]
   ]
 }
