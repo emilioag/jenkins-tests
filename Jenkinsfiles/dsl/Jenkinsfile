@@ -1,4 +1,4 @@
-@Library('utils@master') _
+@Library('utils@dsl') _
 
 mypipeline {
   operations = [
@@ -6,7 +6,8 @@ mypipeline {
       script: 'echo "format things"'
     ],
     build: [
-      script: 'echo "build things"'
+      script: 'echo "build things"',
+      image: 'busybox:latest'
     ]
   ]
 }
