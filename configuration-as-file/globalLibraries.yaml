@@ -1,9 +1,3 @@
-tool:
-  git:
-    installations:
-      - name: git
-        home: /usr/bin/git
-
 unclassified:
   globalLibraries:
     libraries:
@@ -14,3 +8,4 @@ unclassified:
             scm:
               git:
                 remote: "https://github.com/emilioag/jenkins-tests.git"
+                credentialsId: "githubpass"

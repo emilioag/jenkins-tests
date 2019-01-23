@@ -1,0 +1,13 @@
+@Library('utils@dsl') _
+
+mypipeline {
+  operations = [
+    format: [
+      script: 'echo "format things"'
+    ],
+    build: [
+      script: 'echo "build things"',
+      image: 'busybox:latest'
+    ]
+  ]
+}
