@@ -1,0 +1,47 @@
+jenkins:
+  clouds:
+    - kubernetes:
+        jenkinsUrl: http://localhost:8080/
+        name: "kubernetes"
+        namespace: "default"
+        serverUrl: "https://10.0.2.15:8443"
+        credentialsId: "kubernetes"
+        serverCertificate: |
+            -----BEGIN CERTIFICATE-----
+            MIIC5zCCAc+gAwIBAgIBATANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwptaW5p
+            a3ViZUNBMB4XDTE5MDEyMjEwMTUzNVoXDTI5MDEyMDEwMTUzNVowFTETMBEGA1UE
+            AxMKbWluaWt1YmVDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAPBZ
+            MXo8OtQL7LFhLl1JjTrxhLKT8fbR885QWyPsJygbvZ9LsgPkAoPyaeDOHQttIHD+
+            HiHpfYTdrZRpg71fWO4VKF7JplMy2HPbvZR0pLSKRxY78ARJ5AG7DMsjMGh+7v0w
+            xqQ4igYfA3suTFm5wxMW9b5Seq/xRPzz4Ol1ieEDZdy2E148qH86fKdMRu7kuiXg
+            Etl4J4wYKEmiD+cJPkcSqNGj8B+tEn/wt0m0vK75vgYp5nC5nV3ZUfs9XiAp+VcV
+            TBXh1vgTOjfCjGSRTnRiiasqd9SIWFKeJv6saeK5W5jhkiDOTDfioL1j+/4r53ga
+            +HNAEFSHiVT0AYAa+RUCAwEAAaNCMEAwDgYDVR0PAQH/BAQDAgKkMB0GA1UdJQQW
+            MBQGCCsGAQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3
+            DQEBCwUAA4IBAQC0vwlwC5k6dErmLWDG30wS/49cjyz72SVfatoTdI6TTAEqrlZ1
+            27QB4xkPtVp+IeaVjiR5ImTDL0S6bmRwPg4lzHA+tshnvxNWSXZbWUoPDCqCtOFD
+            auVD/hMtPZc2dPxaTfB8xVEv6WQu5glyvLphGqa+Crf//N8GZqr6sreQlTyBaDmZ
+            Gh7F17vIR5u8yCR0HjIhWXhykp/y7pCKAuwFakE82lQWagTiDN4IkEueb49onhLm
+            HQx5cSUhWzsQ1seCJBDDhzr6bLhnrxKH6aEGJGO1ZqLtvLOlC6twwSrh/+meLuE9
+            9NuQNO9STjqoLEbj6b/b1Br5MhOob4BAQU9+
+            -----END CERTIFICATE-----
+
+
+# addMasterProxyEnvVars,
+# connectTimeout,
+# containerCapStr,
+# credentialsId,
+# defaultsProviderTemplate,
+# jenkinsTunnel,
+# jenkinsUrl,
+# maxRequestsPerHostStr,
+# name,
+# namespace,
+# podRetention,
+# readTimeout,
+# retentionTimeout,
+# serverCertificate,
+# serverUrl,
+# skipTlsVerify,
+# templates,
+# usageRestricted

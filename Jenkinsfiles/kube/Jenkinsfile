@@ -1,0 +1,16 @@
+@Library('utils@dsl') _
+
+kube {
+  kubernetes = [
+    cloud: "kubernetes",
+    label: "mypod"
+  ]
+  operations = [
+    format: [
+      script: 'echo "format things"'
+    ],
+    build: [
+      script: 'echo "build things"'
+    ]
+  ]
+}

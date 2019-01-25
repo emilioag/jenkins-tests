@@ -42,3 +42,4 @@ workflow-multibranch:2.20
 workflow-scm-step:2.7
 workflow-step-api:2.18
 workflow-support:3.1
+kubernetes:1.12.2
