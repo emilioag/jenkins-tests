@@ -1,4 +1,4 @@
-@Library('utils@dsl') _
+@Library('utils@master') _
 
 mypipeline {
   operations = [

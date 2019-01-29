@@ -7,5 +7,5 @@ unclassified:
           modernSCM:
             scm:
               git:
-                remote: "https://github.com/emilioag/jenkins-tests.git"
+                remote: $GLOBAL_LIBRARIES_REPOSITORY
                 credentialsId: "githubpass"
